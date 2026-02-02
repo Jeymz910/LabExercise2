@@ -1,0 +1,117 @@
+/* Global Styles for Full-Width, Non-Responsive Layout with Dark Blue Theme */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #001122;  /* Dark blue background */
+  color: #ffffff;  /* White text */
+}
+
+/* Full-width container (no fixed max-width) */
+.container {
+  width: 100%;  /* Full width of the screen */
+  padding: 20px;  /* Padding for spacing */
+}
+
+/* Header Styles */
+header {
+  background-color: #003366;  /* Dark blue header */
+  color: white;
+  padding: 20px;
+  text-align: left;
+  width: 100%;  /* Full width */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #cceeff;  /* Light blue links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ffffff;  /* White on hover */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  width: 100%;  /* Full width */
+}
+
+#products h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #cceeff;  /* Light blue heading */
+}
+
+.product-list {
+  display: flex;  /* Flex for horizontal layout */
+  justify-content: space-around;  /* Space out products */
+  flex-wrap: wrap;  /* Wrap if needed, but fixed */
+  width: 100%;  /* Full width */
+}
+
+.product {
+  background-color: #ffffff;  /* White cards */
+  border: 1px solid #003366;  /* Dark blue border */
+  padding: 15px;
+  margin: 10px;
+  width: 250px;  /* Fixed product width */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  color: #000000;  /* Black text inside */
+}
+
+.product h3 {
+  margin-top: 0;
+  color: #003366;  /* Dark blue titles */
+}
+
+.price {
+  font-weight: bold;
+  color: #0056b3;  /* Medium blue prices */
+}
+
+button {
+  background-color: #0056b3;  /* Medium blue buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #003366;  /* Darker blue on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #003366;  /* Dark blue footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;  /* Full width */
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
