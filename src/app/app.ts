@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductsComponent } from './products/products.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],  // Empty, since RouterOutlet was unused
+  standalone: true,
+  imports: [ProductsComponent],  // ✅ keep this
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']   // ✅ CORRECT
 })
 export class App {
-  protected readonly title = ('J-TECH SHOP');
+  title = 'J-TECH SHOP';
 }
 

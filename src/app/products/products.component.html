@@ -1,0 +1,35 @@
+<!-- Cart Info -->
+<div class="cart-info">
+  🛒 Items in Cart: {{ cartCount }} | Total: ${{ totalPrice }}
+</div>
+
+<!-- Category Filter -->
+<div class="category-filter">
+  <button (click)="filterCategory('All')">All</button>
+  <button (click)="filterCategory('Phones')">Phones</button>
+  <button (click)="filterCategory('Laptops')">Laptops</button>
+  <button (click)="filterCategory('Audio')">Audio</button>
+  <button (click)="filterCategory('Wearables')">Wearables</button>
+  <button (click)="filterCategory('Tablets')">Tablets</button>
+  <button (click)="filterCategory('Gaming')">Gaming</button>
+  <button (click)="filterCategory('Drones')">Drones</button>
+  <button (click)="filterCategory('Smart Home')">Smart Home</button>
+</div>
+
+<!-- Product Grid -->
+<div class="product-list">
+  <div class="product-card" *ngFor="let product of filteredProducts">
+    <div class="image-container">
+      <img [src]="product.image" [alt]="product.name" />
+    </div>
+    <h3>{{ product.name }}</h3>
+    <p>Category: {{ product.category }}</p>
+    <p>{{ product.description }}</p>
+    <p class="price">$ {{ product.price }}</p>
+    <p *ngIf="product.available; else outOfStock" class="available">Available</p>
+    <ng-template #outOfStock>
+      <p class="out-of-stock">Out of Stock</p>
+    </ng-template>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>
